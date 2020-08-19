@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../../Jquery/Jquery-3.5.1.js">   </script>
+    <style>
+      div {
+        margin:2px;
+        padding:10px;
+        border:2ox gray solid;
+        width:300px;
+      }
+      p{
+        height:100px;
+        width:150px;
+        border:2px pink solid;
+        margin:10px;
+        padding:5px;
+        background-color:gray;
+        color:white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Paragraph</p>
+    </div>
+    <span></span>
+  </body>
+  <script>
+    $(document).ready(function(){
+      var pos = $('p').position();
+      $('span').append('p要素は親要素から('+ pos.left +','+pos.top + ')の位置に表示されています');
+    });
+  </script>
+</html>
